@@ -1,5 +1,5 @@
 {
-  "name": "@saneksa/library-template",
+  "name": "@saneksa/gql-query-transformer",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -8,7 +8,7 @@
     "name": "Alexandr Petyaykin",
     "email": "saneksa2@gmail.com"
   },
-  "repository": "git@github.com:saneksa/library-template",
+  "repository": "git@github.com:saneksa/gql-query-transformer",
   "license": "MIT",
   "files": [
     "dist/",
@@ -16,10 +16,12 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "release": "tsc --noEmit && standard-version && rollup -c"
   },
   "dependencies": {
-    "@types/react": "^18.3.3"
+    "@saneksa/graphql-query-builder": "^3.1.1",
+    "graphql": "^16.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
@@ -29,11 +31,13 @@
     "rollup": "^4.18.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^6.1.1",
+    "standard-version": "^9.5.0",
     "tslib": "^2.6.3",
     "typescript": "^5.5.2"
   },
-  "peerDependencies": {
-    "react": ">=16.9.0"
-  },
-  "keywords": []
+  "keywords": [
+    "graphql",
+    "transformer",
+    "graphql query  to builder"
+  ]
 }
