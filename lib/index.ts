@@ -1,4 +1,5 @@
 import {
+  EnumValue,
   enumValue,
   type GraphQlQuery,
   type IArgumentsMap,
@@ -48,11 +49,11 @@ function argumentNodeToValue(node: ValueNode): any {
 
 function argumentsToCode(args: IArgumentsMap): string | null {
   const entries = Object.entries(args).map(([key, value]) => {
-    if (typeof value === "string") {
+    if (typeof value === "string" || value instanceof EnumValue) {
       return `${key}: "${value}"`;
     }
 
-    return `${key}: ${value}`;
+    return `${key}: ${JSON.stringify(value)}`;
   });
 
   if (!entries.length) return null;
