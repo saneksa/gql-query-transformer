@@ -39,8 +39,10 @@ function argumentNodeToValue(node: ValueNode): any {
         },
         {} as Record<string, any>
       );
+    case Kind.NULL:
+      return null;
     default:
-      throw new Error(`Unsupported argument value kind: ${node.kind}`);
+      throw new Error(`Unsupported argument value: ${JSON.stringify(node)}`);
   }
 }
 
