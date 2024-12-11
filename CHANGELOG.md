@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/saneksa/gql-query-transformer/compare/v1.0.0...v1.1.0) (2024-12-11)
+
+
+### Features
+
+* добавлена обработка null значения ([b7d60cb](https://github.com/saneksa/gql-query-transformer/commit/b7d60cbf8feab58953be7be2e10a60c389b33a9c))
+
 ## 1.0.0 (2024-06-30)
 
 
