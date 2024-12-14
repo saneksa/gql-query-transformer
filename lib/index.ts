@@ -101,15 +101,19 @@ function fieldNodeToGraphQlQuery(
 
   const selections = field.selectionSet ? field.selectionSet.selections : [];
 
+  const argToCode = argumentsToCode(args);
+
   if (selections.length === 0) {
+    if (argToCode) {
+      return `new GraphQlQuery("${alias}", ${argToCode})`;
+    }
+
     return `"${alias}"`;
   }
 
   const nestedQueries = selections
     .map((selection) => selectionNodeToGraphQlQuery(selection, fragments))
     .filter(Boolean);
-
-  const argToCode = argumentsToCode(args);
 
   let queryBuilderCode = `new GraphQlQuery("${alias}"`;
 
@@ -154,6 +158,8 @@ function parseFragments(
 }
 
 export function graphqlQueryToCode(query: string | DocumentNode): string {
+  if (!query) return "";
+
   const ast = parse(typeof query === "string" ? query : print(query));
   const fragments = parseFragments(ast);
   const operation = ast.definitions.find(
