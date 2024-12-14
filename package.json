@@ -17,6 +17,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
+    "test": "jest",
     "release": "tsc --noEmit && standard-version && rollup -c"
   },
   "dependencies": {
@@ -27,11 +28,14 @@
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
     "prettier": "^3.4.2",
     "rollup": "^4.28.1",
     "rollup-plugin-delete": "^2.1.0",
     "rollup-plugin-dts": "^6.1.1",
     "standard-version": "^9.5.0",
+    "ts-jest": "^29.2.5",
     "tslib": "^2.6.3",
     "typescript": "^5.7.2"
   },
