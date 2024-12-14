@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/saneksa/gql-query-transformer/compare/v1.1.1...v1.2.0) (2024-12-14)
+
+
+### Features
+
+* добавлены тесты ([1fc0c84](https://github.com/saneksa/gql-query-transformer/commit/1fc0c84c8b793f1a919699528d158dd23c05146e))
+
+
+### Bug Fixes
+
+* исправлена потеря аргументов если нет у запроса вложенных полей ([4804821](https://github.com/saneksa/gql-query-transformer/commit/4804821a86f69d5698e3ac8527e3ccbd3daa74e9))
+
 ### [1.1.1](https://github.com/saneksa/gql-query-transformer/compare/v1.1.0...v1.1.1) (2024-12-11)
 
 
